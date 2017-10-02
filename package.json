@@ -1,6 +1,6 @@
 {
   "name": "remote-save",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple save javascript object from remote host (e.g. browser) to json on file system",
   "main": "lib/index.js",
   "scripts": {

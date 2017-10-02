@@ -24,11 +24,11 @@ const folder = path.join(__dirname, 'remote-save-folder')
 app.use('/remote-save', remoteSave({ folder, extend: false }))
 
 
-// on remote-side
+// on remote-side (e.g. browser)
 
-import { client } from 'remote-save'
+import client from 'remote-save/lib/client'
 
-const saver = client({ url: '/remote-save' })
+const saver = client({ url: '/remote-save' }) // or full if other host
 
 saver('file-name', {
   a: true,
