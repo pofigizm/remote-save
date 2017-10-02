@@ -1,0 +1,47 @@
+{
+  "name": "remote-save",
+  "version": "0.1.0",
+  "description": "Simple save javascript object from remote host (e.g. browser) to json on file system",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel -d lib/ src/",
+    "lint": "eslint src/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:pofigizm/remote-save.git"
+  },
+  "keywords": [
+    "tools",
+    "remote",
+    "save",
+    "persist"
+  ],
+  "author": "Denis Iogansen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pofigizm/remote-save/issues"
+  },
+  "homepage": "https://github.com/pofigizm/remote-save",
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.0",
+    "babel-eslint": "8.0.1",
+    "babel-plugin-transform-object-rest-spread": "6.26.0",
+    "babel-preset-env": "1.6.0",
+    "eslint": "4.8.0"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ],
+    "plugins": [
+      "babel-plugin-transform-object-rest-spread"
+    ]
+  },
+  "dependencies": {
+    "json-stable-stringify": "1.0.1",
+    "parseurl": "1.3.2"
+  }
+}
