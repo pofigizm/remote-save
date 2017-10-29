@@ -1,12 +1,12 @@
 {
   "name": "remote-save",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Simple save javascript object from remote host (e.g. browser) to json on file system",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/ src/",
     "lint": "eslint src/",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -28,13 +28,25 @@
     "babel-cli": "6.26.0",
     "babel-core": "6.26.0",
     "babel-eslint": "8.0.1",
+    "babel-jest": "21.2.0",
     "babel-plugin-transform-object-rest-spread": "6.26.0",
-    "babel-preset-env": "1.6.0",
-    "eslint": "4.8.0"
+    "babel-preset-env": "1.6.1",
+    "eslint": "4.10.0",
+    "express": "4.16.2",
+    "jest": "21.2.1",
+    "node-fetch": "1.7.3",
+    "rimraf": "2.6.2"
   },
   "babel": {
     "presets": [
-      "env"
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
     ],
     "plugins": [
       "babel-plugin-transform-object-rest-spread"
