@@ -1,15 +1,23 @@
 module.exports = {
-  'env': {
-    'browser': true,
-    'es6': true,
-    'node': true
+  env: {
+    browser: true,
+    es6: true,
+    node: true
   },
-  'extends': 'eslint:recommended',
-  'parserOptions': {
-    'sourceType': 'module'
+  globals: {
+    afterAll: true,
+    jest: true,
+    describe: true,
+    test: true,
+    expect: true
   },
-  'rules': {
-    'indent': [
+  extends: 'eslint:recommended',
+  parserOptions: {
+    sourceType: 'module'
+    ecmaVersion: 8,
+  },
+  rules: {
+    indent: [
       'error',
       2
     ],
@@ -17,13 +25,13 @@ module.exports = {
       'error',
       'unix'
     ],
-    'quotes': [
+    quotes: [
       'error',
       'single'
     ],
-    'semi': [
+    semi: [
       'error',
       'never'
     ]
   }
-};
+}
